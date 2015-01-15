@@ -50,6 +50,9 @@ public class LonelyTwitterActivity extends Activity {
 	protected void onStart() {
 		
 		User u = new Author();
+		
+		ArrayList<User> array = new ArrayList<User>();
+		
 		try {
 			u.setUsername("joe");
 		} catch (IOException e) {
