@@ -66,7 +66,14 @@ public class TweetListTests extends
 		assertFalse(tweetList.hasTweet(tweet2));
 	}
 	
-	
+	public void testRemove() {
+		TweetList tweetList = new TweetList();
+		NormalTweetModel tweet = new NormalTweetModel("hello 1");
+		tweetList.addTweet(tweet);
+		assertTrue(tweetList.hasTweet(tweet));
+	    tweetList.removeTweet(tweet);
+	    assertFalse(tweetList.hasTweet(tweet));
+	}
 	
 
 }

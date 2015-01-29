@@ -40,4 +40,9 @@ public class TweetList {
 		return false;
 	}
 
+	public void removeTweet(NormalTweetModel tweet) {
+		tweetList.remove(tweet);
+		
+	}
+
 }
