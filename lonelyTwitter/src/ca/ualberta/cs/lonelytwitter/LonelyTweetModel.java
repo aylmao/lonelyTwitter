@@ -2,6 +2,8 @@ package ca.ualberta.cs.lonelytwitter;
 
 import java.util.Date;
 
+import android.renderscript.Type;
+
 public abstract class LonelyTweetModel {
 	private String text;
 	protected Date timestamp;
@@ -34,6 +36,10 @@ public abstract class LonelyTweetModel {
 	
 	public boolean equals(Object other) {
 		if (other == null || !(other instanceof LonelyTweetModel)) {
+			return false;
+		}
+		
+		if (other == NormalTweetModel.class) {
 			return false;
 		}
 		
