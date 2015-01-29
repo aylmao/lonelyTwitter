@@ -15,6 +15,11 @@ public class ImportantTweetModel extends LonelyTweetModel {
 	public String getText() {
 		return "Important! " + super.getText();
 	}
+	
+	@Override
+	public boolean equals(Object other) {
+		return super.equals(other) && (other instanceof ImportantTweetModel);
+	}
 
 	@Override
 	public Date getTimestamp() {

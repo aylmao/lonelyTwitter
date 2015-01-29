@@ -38,6 +38,7 @@ public class lonelTweetModelTest extends
 		NormalTweetModel tweet2 = new NormalTweetModel("Hello",date);
 		ImportantTweetModel tweet3 = new ImportantTweetModel("Hello",date);
 		assertFalse("Same tweets", tweet1.equals(tweet3));
+		assertFalse("Same tweets", tweet3.equals(tweet1));
 		assertTrue("Different tweets", tweet1.equals(tweet2));
 	}
 	
