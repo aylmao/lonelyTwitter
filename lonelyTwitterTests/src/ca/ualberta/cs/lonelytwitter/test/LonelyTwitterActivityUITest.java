@@ -26,6 +26,19 @@ public class LonelyTwitterActivityUITest extends
 		super(LonelyTwitterActivity.class);
 	}
 
+	public void testSettingTex() {
+		instrumentation.runOnMainSync(new Runnable(){
+			@Override
+			public void run(){
+				textInput.setText("Text");
+			}
+			});
+		
+		instrumentation.waitForIdleSync();
+		
+		assertEquals("Text?", "Text", textInput.getText().toString());
+	}
+	
 	protected void setUp() throws Exception {
 		super.setUp();
 		instrumentation = getInstrumentation();
